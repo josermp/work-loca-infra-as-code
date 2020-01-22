@@ -1,0 +1,64 @@
+comandos do terraform
+
+1° comando = terraform init - inicia o terraform e baixa todos os plugins atuais dentro do .terraform
+
+colocar o .terraform
+
+.gitignore - colocar .terrafomr dentro do .gitignore
+
+terrafom plan -out  - gera o plano 
+
+terraform apply - aplica a implantação
+
+terraform destroy 
+
+######
+
+A primeira coisa que precisamos fazer e criar uma bucket chamada tfstate-aula2-josermp
+
+Vamos comecar a fazer o chão de fabrica
+
+Criar 1° 
+ Começar a configurar o terraform
+
+ provider = aws
+  A segunda coisa necessária é o backend
+
+  o terraform quarda o tfstate local mais não e recomendado
+  Quardar o 
+o main.tf
+
+terrafomr init - baixa os plugins 
+
+Setup que irei criar https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/VPC_Scenario2.html
+
+
+VPC
+
+Como criamos uma recurso
+
+passamos o resource
+depois o nome
+abri e fecha chaves  para passar os parametros
+
+criar as variaveis
+
+variables.tf
+
+como este parametro enable_dns_hostnames = true 
+
+criar o arquivo de variaveis;
+
+alterar alguns dados do arquivo e executa o terraform plan
+
+criar as subnets - em az diferentes
+
+count 
+
+cidr_block é obrigatorio = functions do terrafomr 
+cidr.subnets é uma função  = onde vc busca recursos que vc criou
+availability_zone = data. usa o datasource - datasource pergunta para o su provaider
+
+
+
+
